@@ -1,42 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="hero is-primary is-small">
-    <div class="hero-body">
-        <h1 class="title is-1 has-text-centered">{{$school->fullname}}</h1>
-    </div>
-</div>
-<br>
-
 <div class="container">
-    @foreach ($list as $course)
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <p class="title is-3 is-marginless">
-                        {{ $course->title }}
-                    </p>
-
-                    <p>
-                        {{ $course->author->name }}
-                    </p>
+    <div class="section">
+        <form class="form" method="GET" action="{{ route('search') }}">
+            <div class="field section">
+                <div class="control is-flex box is-paddingless is-marginless">
+                    <input type="text" class="input is-light is-primary is-medium is-radiusless" name="school" placeholder="Search for your school" />
+                    <button type="submit" class="button is-medium is-primary is-radiusless">
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
                 </div>
             </div>
+        </form>
+    </div>
 
-            @if ($course->description)
-            <div class="card-content">
-                <p>
-                    {{$course->description}}
-                </p>
-            </div>
-            @endif
-
-            <div class="card-footer">
-                <a class="card-footer-item">Subscribe</a>
-                <a class="card-footer-item">Read More</a>
-            </div>
-        </div>
-        <br>
-    @endforeach
+    <div class="section">
+        <h2 class="title is-2">News</h2>
+    </div>
 </div>
 @endsection

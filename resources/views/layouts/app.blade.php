@@ -2,20 +2,15 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -23,14 +18,22 @@
 
 <body>
     <div id="app">
-        <nav class="navbar is-primary" role="navigation">
+        <nav class="navbar box is-marginless is-paddingless is-radiusless" role="navigation">
             <div class="navbar-brand">
-                <a class="navbar-item title is-2" href="{{ url('/') }}">
+                <a class="navbar-item title is-4" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
             </div>
 
             <div class="navbar-menu">
+                @if (Auth::user())
+                <div class="navbar-start">
+                    <a class="navbar-item" href="{{ route('new course') }}">Pubblica corso</a>
+
+                    <a class="navbar-item" href="">Consiglia attività</a>
+                </div>
+                @endif
+
                 <div class="navbar-end">
                     <!-- Authentication Links -->
                     @guest
@@ -107,7 +110,7 @@
                         <div class="column">
                             <p class="subtitle is-3">About</p>
 
-                            <p>Built with <strong>Laravel</strong> and <strong>Bulma</strong> by <a href="https://snisni.it/profile/sinisimattia">Mattia Sinisi</a></p>
+                            <p>Built with <strong>Laravel</strong>, <strong>Bulma</strong> and <strong>Vue</strong> by <a href="https://snisni.it/profile/sinisimattia">Mattia Sinisi</a></p>
 
                             <br>
 

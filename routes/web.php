@@ -12,38 +12,44 @@
 */
 
 use App\Http\Controllers\CourseController;
-use App\School;
+use App\Http\Controllers\SchoolController;
 
 Route::get('/', function () {
     return view('welcome');
-})->name('home');
+})->name('welcome');
 
 Auth::routes();
 
-Route::get('/home', function(){
-    return view('searchschool');
+Route::prefix('home')->group(function () {
+    Route::view('', 'home'/*, ["posts" => ···]*/)->name('home');
+
+    Route::prefix('{school_name}')->group(function ($school_name) {
+        Route::get('', function ($school_name) {
+            return view('school', [
+                'school' => SchoolController::get($school_name),
+                'list' => CourseController::list($school_name)
+            ]);
+        })->name('school');
+
+        Route::get('{course_id}', function ($school_name, $course_id) {
+            return view('course', [
+                'course' => CourseController::get($course_id),
+                'school' => SchoolController::get($school_name)
+            ]);
+        })->name('course');
+    });
 });
 
-Route::get('/home/{school_name}', function($school_name){
-    return view('home', [
-        "school" => School::where('name', $school_name)->first(),
-        "list" => CourseController::list($school_name)
-    ]);
-})->name('school');
+Route::get('search', 'SearchController@schools')->name('search');
 
-Route::get('/home/{school_name}/course/{course_id}', function($school_name, $course_id){
-    return view('home', [
-        "school" => School::where('name', $school_name)->first(),
-        "list" => CourseController::list($school_name)
-    ]);
-})->name('course');
-
-Route::middleware('auth')->group(function(){
-    Route::prefix('/new')->group(function(){
-        Route::get('course', 'PostController@coursePage');
+Route::middleware('auth')->group(function () {
+    Route::prefix('new')->group(function () {
+        Route::get('course', function () {
+            return view('post');
+        })->name('new course');
     });
 
-    Route::prefix('/publish')->group(function(){
+    Route::prefix('publish')->group(function () {
         Route::post('course', 'CourseController@create');
     });
 });

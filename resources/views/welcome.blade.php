@@ -12,9 +12,9 @@
                     </div>
 
                     <div class="card-footer">
-                        <a href="/home" class="card-footer-item is-success">Scopri i corsi</a>
-                        <a href="/pubblica" class="card-footer-item is-success">Crea un corso</a>
-                        <a href="/consiglia" class="card-footer-item is-success">Consiglia un corso</a>
+                        <a href="/home" class="card-footer-item is-success">Scopri le scuole</a>
+                        <a href="/new/course" class="card-footer-item is-success">Crea un corso</a>
+                        <a href="/suggest" class="card-footer-item is-success">Consiglia un'attività</a>
                     </div>
                 </div>
 
@@ -22,13 +22,13 @@
 
                 <div class="card">
                     <div class="card-content">
-                        <h3>Prenotazioni anonime</h3>
-                        <p>La privacy non è un problema su questa piattaforma, se vuoi prenotarti per un corso senza crearti un'account sei libero di farlo, i tuoi corsi saranno però salvati solo su un dispositivo.</p>
+                        <h3>Resta anonimo, resta aggiornato</h3>
+                        <p>La privacy non è un problema su questa piattaforma, se vuoi esplorare quello che propongono le scuole senza crearti un'account sei libero di farlo, non potrai però interagire con i corsi e con le attività.</p>
                     </div>
 
                     <div class="card-footer">
-                        <a href="#" class="card-footer-item is-success">Crea account</a>
-                        <a href="#" class="card-footer-item is-success">Prosegui anonimamente</a>
+                        <a href="/register" class="card-footer-item is-success">Crea account</a>
+                        <a href="/home" class="card-footer-item is-success">Prosegui anonimamente</a>
                     </div>
                 </div>
 
