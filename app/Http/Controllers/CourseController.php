@@ -39,4 +39,8 @@ class CourseController extends Controller
         if ($school)
            return Course::where('school_id', $school->id)->get();
     }
+
+    public static function get($id){
+        return Course::find($id);
+    }
 }
