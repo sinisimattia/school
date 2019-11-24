@@ -18,8 +18,8 @@ class CreateCoursesTable extends Migration
             $table->timestamps();
 
             $table->text('title');
-            $table->text('description');
-            $table->longText('content');
+            $table->text('description')->nullable();
+            $table->longText('content')->nullable();
             $table->bigInteger('author_id'); // id of user
             $table->bigInteger('school_id'); // id of school
         });
