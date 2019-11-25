@@ -88,7 +88,7 @@ return [
             'database' => ltrim($DATABASE_URL["path"], "/"),
             'username' => $DATABASE_URL["user"],
             'password' => $DATABASE_URL["pass"],
-            'charset' => $DATABASE_URL["charset"] || 'utf8',
+            'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
             'sslmode' => 'require',
