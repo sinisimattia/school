@@ -16,9 +16,28 @@
             </div>
         </form>
     </div>
+</div>
 
-    <div class="section">
-        <h2 class="title is-2">News</h2>
+@if ($schools)
+<div>
+    <div class="container">
+        <h2 class="title is-1">Schools</h2>
+    </div>
+
+    <br>
+
+    <div class="box is-paddingless is-marginless">
+        @foreach ($schools as $school)
+        <a class="hero is-primary is-rounded is-small" href="/home/{{$school->name}}">
+            <div class="hero-body">
+                <div class="container">
+                    <p class="title is-4">{{$school->fullname}}</p>
+                </div>
+            </div>
+        </a>
+        @endforeach
     </div>
 </div>
+@endif
+
 @endsection

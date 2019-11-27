@@ -4,7 +4,7 @@
 <div class="container">
     @foreach ($list as $course)
         <div class="card">
-            <div class="card-header">
+            <div class="card-content">
                 <div>
                     <p class="title is-3 is-marginless">
                         {{ $course->title }}
@@ -14,18 +14,18 @@
                         {{ $course->author->name }}
                     </p>
                 </div>
-            </div>
 
-            @if ($course->description)
-            <div class="card-content">
+                @if ($course->description)
+                <hr>
+
                 <p>
                     {{$course->description}}
                 </p>
+                @endif
             </div>
-            @endif
 
             <div class="card-footer">
-                <a class="card-footer-item">Subscribe</a>
+                <a class="card-footer-item has-text-success">Subscribe</a>
                 <a class="card-footer-item" href="/home/{{$school->name}}/{{$course->id}}">Read More</a>
             </div>
         </div>

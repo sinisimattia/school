@@ -20,9 +20,15 @@
     <div id="app">
         <nav class="navbar box is-marginless is-paddingless is-radiusless" role="navigation">
             <div class="navbar-brand">
-                <a class="navbar-item title is-4" href="{{ url('/') }}">
+                <a class="navbar-item title is-4 is-marginless" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+
+                <div class="navbar-burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
 
             <div class="navbar-menu">
