@@ -2,7 +2,7 @@
 
 @section ('content')
 <div class="hero is-large is-info">
-	
+
 	<div class="hero-body">
 		<div class="container section">
 			<div class="columns is-vcentered">
@@ -12,7 +12,7 @@
 
 				<div class="column">
 					<div class="image is-128x128">
-						<img src="/img/school-material.svg" alt="@"/>
+						<img src="/img/school-material.svg" alt="@" />
 					</div>
 				</div>
 			</div>
@@ -74,6 +74,8 @@
 			<div>
 				<p class="subtitle is-1">Realizzato con <strong class="has-text-danger">Laravel 6</strong></p>
 			</div>
+
+			<div>Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> and by <a href="https://fontawesome.com">Font Awesome</a></div>
 		</div>
 	</div>
 </div>
