@@ -3,6 +3,7 @@
 
 <head>
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link href="/favicon.png" rel="icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -100,15 +101,33 @@
 
                             <ul>
                                 <li>
-                                    <span>Github</span>
+                                    <a href="https://github.com/sinisimattia" noopener target="_blank">
+                                        <span class="icon">
+                                            <i class="fab fa-github"></i>                                            
+                                        </span>
+
+                                        <span>GitHub</span>
+                                    </a>
                                 </li>
 
                                 <li>
-                                    <span>LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/mattia-sinisi-6425bb186/" noopener target="_blank">
+                                        <span class="icon">
+                                            <i class="fab fa-linkedin"></i>                                            
+                                        </span>
+
+                                        <span>LinkedIn</span>
+                                    </a>
                                 </li>
 
                                 <li>
-                                    <span>Blog</span>
+                                    <a href="https://snisni.it" noopener target="_blank">
+                                        <span class="icon">
+                                            <i class="fas fa-pen-nib"></i>                                            
+                                        </span>
+
+                                        <span>Blog</span>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
