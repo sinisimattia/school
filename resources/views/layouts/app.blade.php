@@ -22,7 +22,11 @@
         <nav class="navbar box is-marginless is-paddingless is-radiusless" role="navigation">
             <div class="navbar-brand">
                 <a class="navbar-item title is-4 is-marginless" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <div class="image is-24x24">
+                        <img src="/favicon.png" alt>
+                    </div>
+
+                    <span class="is-hidden-touch">{{ config('app.name', 'Laravel') }}</span>
                 </a>
 
                 <div class="navbar-burger">
@@ -59,7 +63,7 @@
                         </a>
 
                         <div class="navbar-dropdown">
-                            <span class="navbar-item">
+                            <span class="navbar-item is-capitalized">
                                 {{ Auth::user()->name }}
                             </span>
 
