@@ -7,4 +7,4 @@
 
 ### La tua scuola al meglio
 
-[Visita la piattaforma]("http://www.schoolplusplus.space")
+[Visita la piattaforma](http://www.schoolplusplus.space)
