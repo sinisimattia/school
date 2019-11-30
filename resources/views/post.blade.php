@@ -4,7 +4,7 @@
 <div class="container section">
     <h1 class="title is-1">Publish</h1>
 
-    <form action="/publish/course" method="POST">
+    <form action="{{route('publish course')}}" method="POST">
         @csrf
         
         <div class="field">
