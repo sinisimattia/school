@@ -94,8 +94,8 @@
                 </div>
 
                 <div class="section">
-                    <span>Migrazione a <strong class="has-text-primary">Laravel</strong></span>
-                    <progress class="progress is-primary" value="25" max="100"></progress>
+                    <span>Stato di <strong class="has-text-primary">completamento</strong></span>
+                    <progress class="progress is-primary" value="35" max="100"></progress>
                 </div>
 
                 <div class="section">
