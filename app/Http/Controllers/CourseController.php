@@ -15,22 +15,26 @@ class CourseController extends Controller
     }
 
     public static function create(Request $request){
-        if (!Auth::user()->school_id) return back();
-        
-        $request->validate([
-            'title' => 'required'
+        if (Auth::user()->can('create', Course::class)){
+            $request->validate([
+                'title' => 'required'
+            ]);
+
+            $course = new Course();
+
+            $course->title = $request->title;
+            $course->description = $request->desc;
+            $course->content = $request->content;
+            $course->author_id = Auth::user()->id;
+            $course->school_id = Auth::user()->school_id;
+
+            if($course->save()) return redirect()->route('home');
+            else return back()->withInput();
+        }
+        else return view('error', [
+            'code' => "",
+            'message' => "You are not authorized to create a course"
         ]);
-
-        $course = new Course();
-
-        $course->title = $request->title;
-        $course->description = $request->desc;
-        $course->content = $request->content;
-        $course->author_id = Auth::user()->id;
-        $course->school_id = Auth::user()->school_id;
-
-        if($course->save()) return redirect()->route('home');
-        else return back()->withInput();
     }
 
     public static function list(String $school_name){

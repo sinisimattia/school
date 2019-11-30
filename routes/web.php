@@ -54,6 +54,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::prefix('publish')->group(function () {
-        Route::post('course', 'CourseController@create');
+        Route::post('course', 'CourseController@create')->name('publish course');
     });
 });
