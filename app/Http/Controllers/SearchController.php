@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class SearchController extends Controller
 {
     public function schools(Request $request){
-        $results = School::where('fullname', 'LIKE', '%'.$request->search.'%')->get();
+        $results = School::where('fullname', 'LIKE', '%'.strtolower($request->search).'%')->get();
 
         return view('results', [
             'search' => $request->search,
