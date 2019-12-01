@@ -44,7 +44,7 @@ Route::prefix('home')->group(function () {
     });
 });
 
-Route::get('search', 'SearchController@schools')->name('search');
+Route::get('search', 'SearchController@schools')->name('search schools');
 
 Route::middleware('auth')->group(function () {
     Route::prefix('new')->group(function () {
