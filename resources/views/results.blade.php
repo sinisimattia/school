@@ -3,6 +3,12 @@
 @section('content')
 
 @if ($list)
+    <div class="hero is-info is-small">
+        <div class="hero-body container">
+            <p>Results for "<b>{{$search}}</b>"</p>
+        </div>
+    </div>
+
     @foreach($list as $school)
         <div class="hero">
             <a class="hero-body" href="/home/{{$school->name}}">

@@ -29,14 +29,14 @@
                     <span class="is-hidden-touch">{{ config('app.name', 'Laravel') }}</span>
                 </a>
 
-                <div class="navbar-burger">
+                <div class="navbar-burger" onclick="toggle()">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
             </div>
 
-            <div class="navbar-menu">
+            <div class="navbar-menu" id="nav-menu">
                 @if (Auth::user())
                 <div class="navbar-start">
                     <a class="navbar-item" href="{{ route('new course') }}">Pubblica corso</a>
