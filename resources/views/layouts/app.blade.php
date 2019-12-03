@@ -25,8 +25,6 @@
                     <div class="image is-24x24">
                         <img src="/favicon.png" alt>
                     </div>
-
-                    <span class="is-hidden-touch">{{ config('app.name', 'Laravel') }}</span>
                 </a>
 
                 <div class="navbar-burger" onclick="toggle()">

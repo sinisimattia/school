@@ -2,19 +2,12 @@
 
 @section('page_title', 'About')
 @section ('content')
-<div class="hero is-large is-info">
-
+<div class="hero is-small">
 	<div class="hero-body">
 		<div class="container section">
 			<div class="columns is-vcentered">
 				<div class="column">
 					<h2 class="subtitle is-2">La tua scuola al meglio.</h2>
-				</div>
-
-				<div class="column">
-					<div class="image is-128x128">
-						<img src="/img/school-material.svg" alt="@" />
-					</div>
 				</div>
 			</div>
 		</div>
@@ -42,7 +35,7 @@
 			<div class="card">
 				<div class="card-header is-block">
 					<div class="card-image image is-paddingless">
-						<img src="https://picsum.photos/500/300" alt>
+						<img src="" alt>
 					</div>
 				</div>
 
