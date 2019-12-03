@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('page_title', $school->fullname)
 @section('content')
 <div class="hero is-primary is-small">
     <div class="hero-body">

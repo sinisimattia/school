@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@if($search)
+    @section('page_title', 'Results for '.$search)
+@endif
+
 @section('content')
 
 @if ($list)

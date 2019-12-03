@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('page_title', 'Welcome!') · {{ config('app.name', 'Laravel') }}</title>
     <link href="/favicon.png" rel="icon">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,13 +37,13 @@
             </div>
 
             <div class="navbar-menu" id="nav-menu">
-                @if (Auth::user())
                 <div class="navbar-start">
-                    <a class="navbar-item" href="{{ route('new course') }}">Pubblica corso</a>
+                    <a class="navbar-item" href="{{ route('home') }}">Home</a>
 
-                    <a class="navbar-item" href="">Consiglia attività</a>
+                    @if (Auth::user() && Auth::user()->school)
+                    <a class="navbar-item" href="{{ route('home').'/'.Auth::user()->school->name }}">Your School</a>
+                    @endif
                 </div>
-                @endif
 
                 <div class="navbar-end">
                     <!-- Authentication Links -->
@@ -59,13 +59,19 @@
                             <span class="icon">
                                 <i class="fas fa-user"></i>
                             </span>
-                            Profilo
+                            <span>Profilo</span>
                         </a>
 
                         <div class="navbar-dropdown">
-                            <span class="navbar-item is-capitalized">
+                            <strong class="navbar-item is-capitalized">
                                 {{ Auth::user()->name }}
-                            </span>
+                            </strong>
+
+                            <hr class="is-marginless">
+
+                            <a class="navbar-item" href="{{ route('new course') }}">Pubblica corso</a>
+
+                            <a class="navbar-item" href="">Consiglia attività</a>
 
                             <a class="navbar-item is-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
@@ -86,6 +92,13 @@
             @yield('content')
         </main>
 
+        <div class="hero is-small is-danger">
+            <div class="hero-body container is-flex">
+                <span class="tag is-white">Warning!</span>
+                <p>We are still in the testing phase! Every information saved will be deleted by the end of this week.</p>
+            </div>
+        </div>
+
         <div class="footer">
             <div class="container">
                 <div class="section">
@@ -95,7 +108,7 @@
 
                 <div class="section">
                     <span>Stato di <strong class="has-text-primary">completamento</strong></span>
-                    <progress class="progress is-primary" value="35" max="100"></progress>
+                    <progress class="progress is-primary" value="80" max="100"></progress>
                 </div>
 
                 <div class="section">

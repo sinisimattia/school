@@ -1,5 +1,9 @@
 @extends ('layouts.app')
 
+@if ($code)
+    @section('page_title', 404)
+@endif
+
 @section ('content')
 <div class="hero is-fullheight is-danger">
     <div class="hero-body container">

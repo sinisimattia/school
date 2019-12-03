@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('page_title', 'New Course')
 @section('content')
 <div class="container section">
     <h1 class="title is-1">Publish</h1>

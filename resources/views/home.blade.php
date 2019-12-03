@@ -1,5 +1,6 @@
 @extends('layouts.app')
 
+@section('page_title', 'Home')
 @section('content')
 <div class="container">
     <div class="section is-marginless-touch">

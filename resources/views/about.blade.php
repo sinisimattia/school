@@ -1,5 +1,6 @@
 @extends ('layouts.app')
 
+@section('page_title', 'About')
 @section ('content')
 <div class="hero is-large is-info">
 
