@@ -41,7 +41,7 @@ class CourseController extends Controller
         $school = School::where('name', $school_name)->first();
 
         if ($school)
-           return Course::where('school_id', $school->id)->get();
+           return Course::where('school_id', $school->id)->where('approved', true)->get();
     }
 
     public static function get($id){
