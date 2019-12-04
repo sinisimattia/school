@@ -23,7 +23,7 @@
             <div class="navbar-brand">
                 <a class="navbar-item title is-4 is-marginless" href="{{ url('/') }}">
                     <div class="image is-24x24">
-                        <img src="/favicon.png" alt>
+                        <img src="/img/logo.svg" alt>
                     </div>
                 </a>
 
@@ -71,8 +71,14 @@
 
                             <a class="navbar-item" href="">@lang('ui.new.activity')</a>
 
-                            <a class="navbar-item has-text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
+                            <a
+                                class="navbar-item has-text-danger"
+                                href="{{ route('logout') }}"
+                                onclick="
+                                    event.preventDefault();
+                                    document.getElementById('logout-form').submit();
+                                "
+                            >
                                 @lang('ui.logout')
                             </a>
 
