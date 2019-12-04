@@ -1,6 +1,6 @@
 <div align="center" style="display:flex;">
     <div style="margin:auto; display:flex">
-        <img src="./public/img/school-material.svg" height="100px"/>
+        <img src="./public/img/logo.svg" height="100px"/>
         <h1>School++</h1>
     </div>
 </div>
