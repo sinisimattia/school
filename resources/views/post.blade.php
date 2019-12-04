@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('page_title', @lang('ui.new.course'))
+@section('page_title', 'Post')
 @section('content')
 <div class="container section">
     <h1 class="title is-1">@lang('ui.publish')</h1>
