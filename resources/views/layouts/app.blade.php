@@ -36,19 +36,19 @@
 
             <div class="navbar-menu" id="nav-menu">
                 <div class="navbar-start">
-                    <a class="navbar-item" href="{{ route('home') }}">Home</a>
+                    <a class="navbar-item" href="{{ route('home') }}">@lang('ui.home')</a>
 
                     @if (Auth::user() && Auth::user()->school)
-                    <a class="navbar-item" href="{{ route('home').'/'.Auth::user()->school->name }}">Your School</a>
+                    <a class="navbar-item" href="{{ route('home').'/'.Auth::user()->school->name }}">@lang('ui.your.school')</a>
                     @endif
                 </div>
 
                 <div class="navbar-end">
                     <!-- Authentication Links -->
                     @guest
-                    <a class="navbar-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+                    <a class="navbar-item" href="{{ route('login') }}">@lang('ui.login')</a>
                     @if (Route::has('register'))
-                    <a class="navbar-item" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    <a class="navbar-item" href="{{ route('register') }}">@lang('ui.register')</a>
                     @endif
 
                     @else
@@ -57,7 +57,7 @@
                             <span class="icon">
                                 <i class="fas fa-user"></i>
                             </span>
-                            <span>Profilo</span>
+                            <span>@lang('ui.your.profile')</span>
                         </a>
 
                         <div class="navbar-dropdown">
@@ -67,13 +67,13 @@
 
                             <hr class="is-marginless">
 
-                            <a class="navbar-item" href="{{ route('new course') }}">Pubblica corso</a>
+                            <a class="navbar-item" href="{{ route('new course') }}">@lang('ui.new.course')</a>
 
-                            <a class="navbar-item" href="">Consiglia attività</a>
+                            <a class="navbar-item" href="">@lang('ui.new.activity')</a>
 
-                            <a class="navbar-item is-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <a class="navbar-item has-text-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
+                                @lang('ui.logout')
                             </a>
 
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -90,23 +90,11 @@
             @yield('content')
         </main>
 
-        <div class="hero is-small is-danger">
-            <div class="hero-body container is-flex">
-                <span class="tag is-white">Warning!</span>
-                <p>We are still in the testing phase! Every information saved will be deleted by the end of this week.</p>
-            </div>
-        </div>
-
         <div class="footer">
             <div class="container">
                 <div class="section">
                     <span class="tag is-success">Free</span>
                     <span class="tag is-info">Open Source</span>
-                </div>
-
-                <div class="section">
-                    <span>Stato di <strong class="has-text-primary">completamento</strong></span>
-                    <progress class="progress is-primary" value="80" max="100"></progress>
                 </div>
 
                 <div class="section">

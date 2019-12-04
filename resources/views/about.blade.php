@@ -44,8 +44,6 @@
 						<p class="title is-3">Mattia Sinisi</p>
 						<p class="subtitle is-5">Developer, Project Manager</p>
 					</div>
-
-					<p>Una citazione qui.</p>
 				</div>
 
 				<div class="card-footer">

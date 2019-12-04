@@ -24,7 +24,7 @@
     <div class="hero is-small">
         <div class="hero-body">
             <div class="container">
-                <h2 class="title is-1">Schools</h2>
+                <h2 class="title is-1">@lang('ui.schools')</h2>
             </div>
         </div>
     </div>

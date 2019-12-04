@@ -47,7 +47,7 @@
     @section('content')
     <div class="hero is-full-widescreen">
         <div class="hero-body container">
-            <h1 class="title is-1">Sorry...</h1>
+            <h1 class="title is-1">@lang('ui.sorry')...</h1>
             <p class="subtitle is-3">This course does not exist...</p>
         </div>
     </div>

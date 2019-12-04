@@ -9,7 +9,7 @@
     <div class="hero-body container">
         <div>
             <h1 class="title is-1">
-                Error {{$code ? $code : ""}}
+                @lang('errors.error') {{$code ? $code : ""}}
             </h1>
 
             @if ('message')
@@ -18,7 +18,7 @@
             </p>
             @endif
 
-            <a class="button is-inverted is-outlined is-danger" href="{{ route('home') }}">Return to home</a>
+            <a class="button is-inverted is-outlined is-danger" href="{{ route('home') }}">@lang('ui.return.to.home')</a>
         </div>
     </div>
 </div>

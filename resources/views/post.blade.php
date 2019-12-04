@@ -1,29 +1,29 @@
 @extends('layouts.app')
 
-@section('page_title', 'New Course')
+@section('page_title', @lang('ui.new.course'))
 @section('content')
 <div class="container section">
-    <h1 class="title is-1">Publish</h1>
+    <h1 class="title is-1">@lang('ui.publish')</h1>
 
     <form action="{{route('publish course')}}" method="POST">
         @csrf
         
         <div class="field">
             <div class="control">
-                <input name="title" class="input is-large" type="text" placeholder="Title *" required/>
+                <input name="title" class="input is-large" type="text" placeholder="@lang('ui.title') *" required/>
                 
             </div>
         </div>
 
         <div class="field">
             <div class="control">
-                <textarea name="desc" class="textarea is-small" type="text" placeholder="Description"></textarea>
+                <textarea name="desc" class="textarea is-small" type="text" placeholder="@lang('ui.description')"></textarea>
             </div>
         </div>
 
         <div class="field">
             <div class="control">
-                <textarea name="content" class="textarea" type="text" placeholder="Content"></textarea>
+                <textarea name="content" class="textarea" type="text" placeholder="@lang('ui.content')"></textarea>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
                         <i class="fas fa-paper-plane"></i>
                     </span>
                                         
-                    <span>Submit</span>
+                    <span>@lang('ui.submit')</span>
                 </button>
             </div>
         </div>
