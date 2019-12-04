@@ -33,23 +33,6 @@
         </div>
     </div>
 
-    <!--<div class="hero is-large">
-        <div class="hero-body container">
-            <div class="columns is-8 is-vcentered">
-                <div class="column is-two-fifths">
-                    <div class="image is-128x128">
-                        <img src="/img/school-material.svg" alt />
-                    </div>
-                </div>
-
-                <div class="column">
-                    <h1 class="title is-1 has-text-primary">School++</h1>
-                    <h2 class="subtitle is-3">La tua scuola al meglio.</h2>
-                </div>
-            </div>
-        </div>
-    </div>-->
-
     <div class="content container section" id="info">
         <div class="columns is-variable">
             <div class="column">
