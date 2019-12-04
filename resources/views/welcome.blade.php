@@ -16,8 +16,8 @@
                 </div>
 
                 <div class="has-text-centered section">
-                    <button class="button is-rounded is-primary is-large box is-inline">@lang('ui.login')</button>
-                    <button class="button is-rounded is-primary is-light is-large box is-inline">@lang('ui.register')</button>
+                    <a href="/login" class="button is-rounded is-primary is-large box is-inline">@lang('ui.login')</a>
+                    <a href="/register" class="button is-rounded is-primary is-light is-large box is-inline">@lang('ui.register')</a>
                 </div>
             </div>
 
