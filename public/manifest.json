@@ -1,0 +1,10 @@
+{
+    "manifest_version": 2,
+    "name": "School++",
+    "description": "Piattaforma per la gestione scolastica",
+    "author": "Mattia Sinisi",
+    "icons": {
+        "128": "./img/logo.svg"
+    },
+    "default_locale": "en"
+}
