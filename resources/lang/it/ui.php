@@ -46,4 +46,5 @@ return [
         "profile" => "Il tuo profilo"
     ],
     "home" => "Home",
+    "info" => "Più info",
 ];
