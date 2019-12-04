@@ -7,7 +7,7 @@
         <form class="form" method="GET" action="{{ route('search schools') }}">
             <div class="field section">
                 <div class="control is-flex box is-paddingless is-marginless">
-                    <input type="text" class="input is-light is-primary is-medium is-radiusless" name="search" placeholder="Search for your school" />
+                    <input type="text" class="input is-light is-primary is-medium is-radiusless" name="search" placeholder="@lang('ui.search.schools')" />
                     <button type="submit" class="button is-medium is-primary is-radiusless">
                         <span class="icon">
                             <i class="fas fa-search"></i>

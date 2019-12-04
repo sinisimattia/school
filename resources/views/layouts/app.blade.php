@@ -71,14 +71,10 @@
 
                             <a class="navbar-item" href="">@lang('ui.new.activity')</a>
 
-                            <a
-                                class="navbar-item has-text-danger"
-                                href="{{ route('logout') }}"
-                                onclick="
+                            <a class="navbar-item has-text-danger" href="{{ route('logout') }}" onclick="
                                     event.preventDefault();
                                     document.getElementById('logout-form').submit();
-                                "
-                            >
+                                ">
                                 @lang('ui.logout')
                             </a>
 
@@ -112,7 +108,7 @@
                                 <li>
                                     <a href="https://github.com/sinisimattia" noopener target="_blank">
                                         <span class="icon">
-                                            <i class="fab fa-github"></i>                                            
+                                            <i class="fab fa-github"></i>
                                         </span>
 
                                         <span>GitHub</span>
@@ -122,7 +118,7 @@
                                 <li>
                                     <a href="https://www.linkedin.com/in/mattia-sinisi-6425bb186/" noopener target="_blank">
                                         <span class="icon">
-                                            <i class="fab fa-linkedin"></i>                                            
+                                            <i class="fab fa-linkedin"></i>
                                         </span>
 
                                         <span>LinkedIn</span>
@@ -132,7 +128,7 @@
                                 <li>
                                     <a href="https://snisni.it" noopener target="_blank">
                                         <span class="icon">
-                                            <i class="fas fa-pen-nib"></i>                                            
+                                            <i class="fas fa-pen-nib"></i>
                                         </span>
 
                                         <span>Blog</span>
@@ -148,23 +144,36 @@
 
                             <br>
 
-                            <p>Created for/with the <strong>Michael Faraday Institute of Technology</strong>.</p>
-                            <p>Distributed under the <strong>{{config('app.licence', '[licence]')}} Licence</strong>.</p>
+                            <p>@lang('long.created.for') <strong>Michael Faraday Institute of Technology</strong>.</p>
+                            <p>@lang('long.distributed.under') <strong>{{config('app.licence', '[licence]')}} Licence</strong>.</p>
 
                             <hr>
 
-                            <a href="/about">More info</a>
+                            <a href="/about">@lang('ui.info')</a>
                         </div>
                     </div>
 
                     <div>
-                        <p class="subtitle is-3">Add your school</p>
+                        <p class="subtitle is-3">@lang('long.add_your_school.title')</p>
 
-                        <p>Requests must be sent to <a href="mailto:school@example.com">email@example.com</a> with the details of your school and the contact info of the person managing it.</p>
+                        <p>@lang('long.add_your_school.content')</p>
+
+                        <br>
+
+                        <div class="tag is-info is-light is-medium">
+                            <a href="mailto:school@example.com">
+                                <span class="icon">
+                                    <i class="fas fa-envelope-open-text"></i>
+                                </span> 
+                                
+                                <span>school@example.com</span>
+                                
+                            </a>
+                        </div>
 
                         <hr>
 
-                        <a href="/about/schools">More info</a>
+                        <a href="/about/schools">@lang('ui.info')</a>
                     </div>
                 </div>
 

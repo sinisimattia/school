@@ -16,16 +16,7 @@
 
 <div class="container explanation">
 	<div>
-		<p class="section">
-			Questa piattaforma è dedicata a rendere gli studenti più partecipi e più attivi alle attività dell'istituto,
-			diamo la possibilità di creare e proporre corsi, gite e molto altro, tutto con la dedicazione dei rappresentati e membri dell'istituto.
-			Il nostro scopo è quello di creare un modo accessibile a tutti di migliorare la propria scuola per tutti coloro che la frequentano,
-			grazie al feedback di studenti e professori.
-		</p>
-
-		<p class="section">
-			Sono stati proprio degli studenti a realizzarla.
-		</p>
+		<p class="section">@lang('long.about.0')</p>
 	</div>
 </div>
 
@@ -64,7 +55,7 @@
 
 		<div class="column">
 			<div>
-				<p class="subtitle is-1">Realizzato con <strong class="has-text-danger">Laravel 6</strong></p>
+				<p class="subtitle is-1">@lang('long.built.with') <strong class="has-text-danger">Laravel 6</strong></p>
 			</div>
 
 			<div>Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> and by <a href="https://fontawesome.com">Font Awesome</a></div>
