@@ -140,7 +140,7 @@
                         <div class="column">
                             <p class="subtitle is-3">About</p>
 
-                            <p>Built with <strong>Laravel</strong>, <strong>Bulma</strong> and <strong>Vue</strong> by <a href="https://snisni.it/profile/sinisimattia">Mattia Sinisi</a></p>
+                            <p>@lang('long.built.with') <strong>Laravel</strong>, <strong>Bulma</strong> @lang('misc.and') <strong>Vue</strong> @lang('misc.by') <a href="https://snisni.it/profile/sinisimattia">Mattia Sinisi</a></p>
 
                             <br>
 

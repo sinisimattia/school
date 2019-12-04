@@ -28,7 +28,7 @@
         </div>
 
         <div class="field">
-            <div class="control is-pulled-right">
+            <div class="control">
                 <button type="submit" class="button is-medium is-rounded is-success">
                     <span class="icon is-medium">
                         <i class="fas fa-paper-plane"></i>
