@@ -1,23 +1,6 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+@extends ('layouts.base')
 
-<head>
-    <title>@yield('page_title', 'Welcome!') · {{ config('app.name', 'Laravel') }}</title>
-    <link href="/favicon.png" rel="icon">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-
-<body>
+@section ('app')
     <div id="app">
         <nav class="navbar box is-marginless is-paddingless is-radiusless" role="navigation">
             <div class="navbar-brand">
@@ -27,7 +10,7 @@
                     </div>
                 </a>
 
-                <div class="navbar-burger" onclick="toggle()">
+                <div class="navbar-burger" onclick="document.toggle(this, 'nav-menu', 'is-active')">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -183,6 +166,4 @@
             </div>
         </div>
     </div>
-</body>
-
-</html>
+@endsection

@@ -3,7 +3,8 @@
 
 <head>
     <title>@yield('page_title', 'Welcome!') · {{ config('app.name', 'Laravel') }}</title>
-    <link href="/favicon.png" rel="icon">
+    <link href="/logo.png" rel="icon">
+    <link rel="manifest" href="/manifest.json">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -18,9 +19,7 @@
 </head>
 
 <body>
-    <main>
-        @yield('content')
-    </main>
+    @yield('app')
 </body>
 
 </html>
