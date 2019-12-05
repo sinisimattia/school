@@ -1,12 +1,27 @@
 {
-    "name": "laravel/laravel",
+    "name": "snisni/schoolplusplus",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "homepage": "http://www.schoolplusplus.space",
+    "description": "An online platform for managing your school.",
+    "authors": [
+        {
+            "name": "Mattia Sinisi",
+            "email": "mattia@snisni.it",
+            "homepage": "https://snisni.it/profile/sinisimattia",
+            "role": "Developer, Manager"
+        }
+    ],
     "keywords": [
-        "framework",
+        "platform",
+        "manage",
+        "school",
+        "website",
         "laravel"
     ],
-    "license": "MIT",
+    "license": [
+        "GPL-3.0-only",
+        "MIT"
+    ],
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
