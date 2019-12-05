@@ -36924,6 +36924,10 @@ module.exports = function(module) {
  * building robust, powerful web applications using Svelte and Laravel.
  */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+
+__webpack_require__(/*! ./misc */ "./resources/js/misc.js");
+
+__webpack_require__(/*! ./sw */ "./resources/js/sw.js");
 /*import App from "./components/App.svelte";
 
 const app = new App({
@@ -36978,6 +36982,39 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/misc.js":
+/*!******************************!*\
+  !*** ./resources/js/misc.js ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.toggle = function (source, menu_id, css_class) {
+  var menu = document.getElementById(menu_id);
+  menu.classList.toggle(css_class);
+  source.classList.toggle(css_class);
+};
+
+/***/ }),
+
+/***/ "./resources/js/sw.js":
+/*!****************************!*\
+  !*** ./resources/js/sw.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+if ('serviceWorker' in navigator) {
+  console.log("Will the service worker register?");
+  navigator.serviceWorker.register('service-worker.js').then(function (reg) {
+    console.log("Yes, it did.");
+  })["catch"](function (err) {
+    console.log("No it didn't. This happened: ", err);
+  });
+}
 
 /***/ }),
 

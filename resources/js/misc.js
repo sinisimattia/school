@@ -1,5 +1,5 @@
-function toggle(){
-    var menu = document.getElementById("nav-menu");
-    manu.classList.toggle('is-active');
-    this.classList.toggle('is-active');
+document.toggle = function(source, menu_id, css_class){
+    var menu = document.getElementById(menu_id);
+    menu.classList.toggle(css_class);
+    source.classList.toggle(css_class);
 }

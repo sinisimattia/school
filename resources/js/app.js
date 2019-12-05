@@ -6,6 +6,8 @@
  */
 
 require('./bootstrap');
+require('./misc');
+require('./sw');
 
 /*import App from "./components/App.svelte";
 
