@@ -2,12 +2,12 @@
 
 @section('page_title', 'About')
 @section ('content')
-<div class="hero is-small is-primary" style="background-image: url(https://i.ibb.co/6WbF3GL/abstract-abstract-art-abstract-painting-art-1293120.jpg)">
+<div class="hero is-small is-primary" style="background-image: url(https://i.ibb.co/x1tXjPr/school-poster.jpg)">
 	<div class="hero-body">
 		<div class="container section">
 			<div class="columns is-vcentered">
 				<div class="column">
-					<h2 class="subtitle is-2">
+					<h2 class="title is-2">
 						<span>La tua scuola al meglio.</span>
 					</h2>
 				</div>
