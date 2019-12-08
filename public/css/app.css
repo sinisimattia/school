@@ -18317,3 +18317,17 @@ svg path {
   stroke-width: 4;
 }
 
+.navbar.is-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+

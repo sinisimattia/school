@@ -2,7 +2,7 @@
 
 @section ('app')
     <div id="app">
-        <nav class="navbar box is-marginless is-paddingless is-radiusless" role="navigation">
+        <nav class="navbar box is-marginless is-paddingless is-radiusless is-sticky" role="navigation">
             <div class="navbar-brand">
                 <a class="navbar-item title is-4 is-marginless" href="{{ url('/') }}">
                     <div class="image is-24x24">
@@ -144,12 +144,12 @@
                         <br>
 
                         <div class="tag is-info is-light is-medium">
-                            <a href="mailto:school@example.com">
+                            <a href="mailto:rappresentanti.faraday@gmail.com">
                                 <span class="icon">
                                     <i class="fas fa-envelope-open-text"></i>
                                 </span> 
                                 
-                                <span>school@example.com</span>
+                                <span>rappresentanti.faraday@gmail.com</span>
                                 
                             </a>
                         </div>
@@ -162,6 +162,12 @@
 
                 <div class="has-text-centered has-text-grey">
                     <p>Copyright 2019/2020 <strong>School++</strong> · A project of I.T.I.s. Michael Faraday Ostia</p>
+                    <br>
+                    <a class="is-block" href="#" target="_blank">
+                        <span class="icon">
+                            <i class="fas fa-mug-hot"></i>
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

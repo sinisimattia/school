@@ -1,8 +1,21 @@
-svg{
-    path{
-		fill: transparent;
-		/*stroke: #363636;*/
-		stroke: $black;
-		stroke-width: 4;
-	}
+svg {
+    path {
+        fill: transparent;
+        /*stroke: #363636;*/
+        stroke: $black;
+        stroke-width: 4;
+    }
+}
+
+.navbar.is-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.hero{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }

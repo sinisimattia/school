@@ -37,7 +37,19 @@
         </div>
 
         <div class="hero-footer container has-text-centered">
-            <a href="/home" class="button is-primary">@lang('ui.explore.schools')</a>
+            <a href="/home" class="button is-primary">
+                <span>@lang('ui.explore.schools')</span>
+                <span class="icon">
+                    <i class="fas fa-arrow-circle-right"></i>
+                </span>
+            </a>
+
+            <a href="#info" class="button">
+                <span>@lang('ui.info')</span>
+                <span class="icon">
+                    <i class="fas fa-arrow-down"></i>
+                </span>
+            </a>
         </div>
     </div>
 

@@ -2,12 +2,14 @@
 
 @section('page_title', 'About')
 @section ('content')
-<div class="hero is-small">
+<div class="hero is-small is-primary" style="background-image: url(https://i.ibb.co/6WbF3GL/abstract-abstract-art-abstract-painting-art-1293120.jpg)">
 	<div class="hero-body">
 		<div class="container section">
 			<div class="columns is-vcentered">
 				<div class="column">
-					<h2 class="subtitle is-2">La tua scuola al meglio.</h2>
+					<h2 class="subtitle is-2">
+						<span>La tua scuola al meglio.</span>
+					</h2>
 				</div>
 			</div>
 		</div>
@@ -54,11 +56,20 @@
 		</div>
 
 		<div class="column">
-			<div>
-				<p class="subtitle is-1">@lang('long.built.with') <strong class="has-text-danger">Laravel 6</strong></p>
-			</div>
+			<div class="section">
+				<div>
+					<p class="subtitle is-1">@lang('long.built.with') <strong class="has-text-primary">Laravel 6</strong></p>
+				</div>
 
-			<div>Icons made by <a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> and by <a href="https://fontawesome.com">Font Awesome</a></div>
+				<div>
+					Icons made by
+					<a href="https://www.flaticon.com/authors/darius-dan" title="Darius Dan">Darius Dan</a>
+					from
+					<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+					and by
+					<a href="https://fontawesome.com">Font Awesome</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
