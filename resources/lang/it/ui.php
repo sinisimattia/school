@@ -12,6 +12,7 @@ return [
         "activity" => "Consiglia attività"
     ],
     "subscribe" => "Iscriviti",
+    "unsubscribe" => "Annulla iscrizione",
     "admin" => [
         "panel" => "Pannello admin"
     ],

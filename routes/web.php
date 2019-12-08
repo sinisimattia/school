@@ -53,6 +53,9 @@ Route::middleware('auth')->group(function () {
         })->name('new course');
     });
 
+    Route::get('subscribe/{course_id}', 'SubscriptionController@subscribe');
+    Route::get('unsubscribe/{course_id}', 'SubscriptionController@unsubscribe');
+
     Route::prefix('publish')->group(function () {
         Route::post('course', 'CourseController@create')->name('publish course');
     });

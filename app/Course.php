@@ -9,4 +9,8 @@ class Course extends Model
     public function author(){
         return $this->belongsTo('App\User');
     }
+
+    public function subscribers(){
+        return $this->belongsToMany('App\User');
+    }
 }

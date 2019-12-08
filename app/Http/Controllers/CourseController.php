@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\School;
 use App\Course;
 use Illuminate\Support\Facades\Auth;
+//use SubscriptionController;
 
 class CourseController extends Controller
 {
@@ -40,8 +41,15 @@ class CourseController extends Controller
     public static function list(String $school_name){
         $school = School::where('name', $school_name)->first();
 
-        if ($school)
-           return Course::where('school_id', $school->id)->where('approved', true)->get();
+        if ($school){
+            $list = Course::where('school_id', $school->id)->where('approved', true)->get();
+
+            foreach ($list as $course){
+                $course->subscribed = SubscriptionController::subscribed($course->id);
+            }
+
+            return $list;
+        }
     }
 
     public static function get($id){
