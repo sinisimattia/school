@@ -28,18 +28,30 @@ class SubscriptionController extends Controller
     }
 
     public function unsubscribe($course_id){
-        Subscription::where('course_id', $course_id)->where('user_id', Auth::user()->id)->delete();
-        
-        return back();
+        $user = Auth::user();
+        if ($user)
+            if ( Subscription::where('course_id', $course_id)->where('user_id', $user->id)->delete() )
+                return back();
+            else return view('error', [
+                'code' => 500,
+                'message' => 'Failed to unsubscribe.'
+            ]);
     }
 
     /**
      * @return Array List of subscriptions of the current user
      */
     public static function subscriptions(){
-        return Subscription::where('user_id', Auth::user()->id)->get();
+        $user = Auth::user();
+        if ($user)
+            return Subscription::where('user_id', $user->id)->get();
     }
 
+    /**
+     * Checks if the current user is subscribed to the given course
+     * @param course_id The ID of the course you want to check
+     * @return Boolean Wether or not the user is subscribed to the given course
+     */
     public static function subscribed($course_id){
         $user = Auth::user();
         if ($user)

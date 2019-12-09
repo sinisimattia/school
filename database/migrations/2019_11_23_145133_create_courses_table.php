@@ -21,7 +21,7 @@ class CreateCoursesTable extends Migration
             $table->text('title');
             $table->text('description')->nullable();
             $table->longText('content')->nullable();
-            $table->bigInteger('author_id'); // id of user
+            $table->bigInteger('user_id'); // id of user
             $table->bigInteger('school_id'); // id of school
         });
     }

@@ -45,7 +45,7 @@
 
                         <div class="navbar-dropdown">
                             <strong class="navbar-item is-capitalized">
-                                {{ Auth::user()->name }}
+                            <a href="{{ route('my profile') }}">{{ Auth::user()->name }}</a>
                             </strong>
 
                             <hr class="is-marginless">

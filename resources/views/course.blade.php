@@ -14,7 +14,7 @@
                     
                     <div>
                         <h3 class="subtitle is-3">
-                            {{$course->author->name}}
+                            {{$course->user->name}}
                         </h3>
 
                         <span class="has-text-grey">{{$course->updated_at}}</span>

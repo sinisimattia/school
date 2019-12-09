@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\School;
 use App\Course;
+use App\User;
 use Illuminate\Support\Facades\Auth;
 //use SubscriptionController;
 
@@ -26,7 +27,7 @@ class CourseController extends Controller
             $course->title = $request->title;
             $course->description = $request->desc;
             $course->content = $request->content;
-            $course->author_id = Auth::user()->id;
+            $course->user_id = Auth::user()->id;
             $course->school_id = Auth::user()->school_id;
 
             if($course->save()) return redirect()->route('home');

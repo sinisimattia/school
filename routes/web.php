@@ -13,6 +13,7 @@
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\SchoolController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -31,7 +32,8 @@ Route::prefix('home')->group(function () {
         Route::get('', function ($school_name) {
             return view('school', [
                 'school' => SchoolController::get($school_name),
-                'list' => CourseController::list($school_name)
+                'list' => CourseController::list($school_name),
+                'user' => UserController::me()
             ]);
         })->name('school');
 
@@ -51,6 +53,24 @@ Route::middleware('auth')->group(function () {
         Route::get('course', function () {
             return view('post');
         })->name('new course');
+    });
+
+    Route::prefix('my')->group(function(){
+        Route::redirect('', 'profile');
+
+        Route::get('profile', function(){
+            return view('user.dashboard', [
+                'user' => UserController::me()
+            ]);
+        })->name('my profile');
+
+        Route::get('subscriptions', function(){
+            $user = UserController::me();
+            return view('user.subscriptions', [
+                'user' => $user,
+                'courses' => UserController::subscriptions()
+            ]);
+        });
     });
 
     Route::get('subscribe/{course_id}', 'SubscriptionController@subscribe');
