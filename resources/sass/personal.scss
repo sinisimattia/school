@@ -1,8 +1,10 @@
+@use "sass:color";
+
 svg {
     path {
         fill: transparent;
         /*stroke: #363636;*/
-        stroke: $black;
+        stroke: $primary;
         stroke-width: 4;
     }
 }
@@ -14,8 +16,24 @@ svg {
     right: 0;
 }
 
-.hero{
+.hero {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.is-dark{
+    background-color: $dark;
+    color: $white;
+
+    .title,
+    .subtitle,
+    .strong, strong, b
+    {
+        color: $white;
+    }
+
+    hr{
+        background-color: rgba($white, .2);
+    }
 }

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="welcome">
-    <div class="hero is-white is-fullheight">
+    <div class="hero is-fullheight is-dark" style="background-image: url(/img/banner-dark.svg)">
         <div class="hero-header has-text-centered">
             <p>Presentato da</p>
             <p class="title is-5">I.T.I.S. M. Faraday, Ostia</p>
@@ -22,7 +22,7 @@
 
                     @guest
                     <div class="has-text-centered section">
-                        <a href="/login" class="button is-rounded is-primary is-large box is-inline">@lang('ui.login')</a>
+                        <a href="/login" class="button is-rounded is-primary has-gradient is-large box is-inline">@lang('ui.login')</a>
                         <a href="/register" class="button is-rounded is-primary is-light is-large box is-inline">@lang('ui.register')</a>
                     </div>
                     @endif

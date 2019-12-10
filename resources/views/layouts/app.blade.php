@@ -2,7 +2,7 @@
 
 @section ('app')
     <div id="app">
-        <nav class="navbar box is-marginless is-paddingless is-radiusless is-sticky" role="navigation">
+        <nav class="navbar is-dark box is-marginless is-paddingless is-radiusless is-sticky" role="navigation">
             <div class="navbar-brand">
                 <a class="navbar-item title is-4 is-marginless" href="{{ url('/') }}">
                     <div class="image is-24x24">
@@ -75,7 +75,7 @@
             @yield('content')
         </main>
 
-        <div class="footer">
+        <div class="footer is-dark">
             <div class="container">
                 <div class="section">
                     <span class="tag is-success">Free</span>
@@ -153,10 +153,6 @@
                                 
                             </a>
                         </div>
-
-                        <hr>
-
-                        <a href="/about/schools">@lang('ui.info')</a>
                     </div>
                 </div>
 
