@@ -23,6 +23,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->bigInteger('school_id')->nullable();
+
+            $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
         });
     }
 

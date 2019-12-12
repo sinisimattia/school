@@ -17,10 +17,10 @@ class CreateSchoolUserTable extends Migration
             $table->bigInteger('user_id');
             $table->bigInteger('school_id');
 
+            $table->primary(['user_id', 'school_id']);
+
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
-
-            $table->primary(['user_id', 'school_id']);
 
             $table->boolean('approved')->default(false);
         });
