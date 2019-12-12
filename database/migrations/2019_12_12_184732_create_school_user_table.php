@@ -19,8 +19,8 @@ class CreateSchoolUserTable extends Migration
 
             $table->primary(['user_id', 'school_id']);
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
 
             $table->boolean('approved')->default(false);
         });

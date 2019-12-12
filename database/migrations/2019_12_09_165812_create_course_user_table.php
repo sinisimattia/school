@@ -19,8 +19,8 @@ class CreateCourseUserTable extends Migration
             $table->bigInteger('course_id');
             $table->bigInteger('user_id');
 
-            $table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            //$table->foreign('course_id')->references('id')->on('courses')->onDelete('cascade');
+            //$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->primary(['course_id', 'user_id']);
         });
