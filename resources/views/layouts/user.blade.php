@@ -2,22 +2,22 @@
 
 @section('page_title', 'My Subscriptions')
 @section('content')
-<div class="container">
+<div>
     @if ($user)
-    <div class="hero">
+    <div class="hero is-primary">
         <div class="hero-body">
-            <h1 class="title is-1">{{$user->name}}</h1>
-            <h3 class="title is-4">
-                <span class="icon has-text-primary">
-                    <i class="fas fa-at"></i>
-                </span>
-                <span>{{$user->username}}</span>
-            </h3>
+            <div class="container">
+                <h1 class="title is-1">{{$user->name}}</h1>
+                <h3 class="title is-4">
+                    <span>@</span>
+                    <span>{{$user->username}}</span>
+                </h3>
+            </div>
         </div>
     </div>
     @endif
 
-    <main>
+    <main class="container">
         @yield('main')
     </main>
 </div>
