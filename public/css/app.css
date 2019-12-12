@@ -18357,3 +18357,14 @@ svg path {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+body::-webkit-scrollbar {
+  width: 1em;
+  background-color: #202020;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(#7879fc), to(#4648fb));
+  background: linear-gradient(#7879fc, #4648fb);
+  border-radius: 0.5em;
+}
+

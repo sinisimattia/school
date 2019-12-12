@@ -89,7 +89,7 @@
 
                             <ul>
                                 <li>
-                                    <a href="https://github.com/sinisimattia" noopener target="_blank">
+                                    <a href="https://github.com/sinisimattia/school" noopener target="_blank">
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
@@ -158,12 +158,6 @@
 
                 <div class="has-text-centered has-text-grey">
                     <p>Copyright 2019/2020 <strong>School++</strong> · A project of I.T.I.s. Michael Faraday Ostia</p>
-                    <br>
-                    <a class="is-block" href="#" target="_blank">
-                        <span class="icon">
-                            <i class="fas fa-mug-hot"></i>
-                        </span>
-                    </a>
                 </div>
             </div>
         </div>
