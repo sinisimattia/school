@@ -21,9 +21,9 @@ class SchoolController extends Controller
         ]);
     }
 
-    public static function showOne(){
+    public static function showOne($school_name){
         return view('home', [
-            'school' => SchoolController::list()
+            'school' => SchoolController::get($school_name)
         ]);
     }
 }

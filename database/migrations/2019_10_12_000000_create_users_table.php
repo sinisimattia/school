@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->bigInteger('school_id')->nullable();
 
-            //$table->foreign('school_id')->references('id')->on('schools')->onDelete('cascade');
+            //$table->foreign('school_id')->references('id')->on('schools');
         });
     }
 
