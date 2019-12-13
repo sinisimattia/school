@@ -53,12 +53,15 @@ Route::middleware('auth')->group(function () {
         })->name('new course');
     });
 
+    Route::post('request', 'RequestController@new')->name('request');
+
     Route::prefix('my')->group(function(){
         Route::redirect('', 'profile');
 
         Route::get('profile', function(){
             return view('user.dashboard', [
-                'user' => UserController::me()
+                'user' => UserController::me(),
+                'schools' => SchoolController::list()
             ]);
         })->name('my profile');
 
