@@ -14,6 +14,8 @@ class CreateSchoolUserTable extends Migration
     public function up()
     {
         Schema::create('school_user', function (Blueprint $table) {
+            $table->timestamps();
+            
             $table->bigInteger('user_id');
             $table->bigInteger('school_id');
 
