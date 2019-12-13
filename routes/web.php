@@ -24,9 +24,7 @@ Auth::routes();
 Route::view('about', 'about')->name('about');
 
 Route::prefix('home')->group(function () {
-    Route::view('', 'home', [
-        'schools' => SchoolController::list()
-    ])->name('home');
+    Route::get('', 'SchoolController@show')->name('home');
 
     Route::prefix('{school_name}')->group(function ($school_name) {
         Route::get('', function ($school_name) {

@@ -14,4 +14,16 @@ class SchoolController extends Controller
     public static function list(){
         return School::all()->take(10);
     }
+
+    public static function show(){
+        return view('home', [
+            'schools' => SchoolController::list()
+        ]);
+    }
+
+    public static function showOne(){
+        return view('home', [
+            'school' => SchoolController::list()
+        ]);
+    }
 }
