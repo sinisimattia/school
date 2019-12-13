@@ -24,7 +24,7 @@ class CreateCoursesTable extends Migration
             $table->bigInteger('user_id'); // id of user
             $table->bigInteger('school_id'); // id of school
 
-            //$table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
