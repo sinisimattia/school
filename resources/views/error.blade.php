@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @if ($code)
-    @section('page_title', 404)
+    @section('page_title', $code)
 @endif
 
 @section ('content')
