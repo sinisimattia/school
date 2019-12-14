@@ -5,8 +5,8 @@ La guida completa su come collaborare al progetto e dare il tuo contributo a mig
 Se desideri aiutarci oppure utilizzare le nostre tecnologie nella tua piattaforma questa documentazione fa al caso tuo.
 
 ## Contenuti
-- [Creazione ambiente di sviluppo](#)
-- [Database](#)
+- [Creazione ambiente di sviluppo](startup.md)
+- [Database](database.md)
 - [Rapporti fra entità (modelli)](#)
 - [Struttura delle pagine (routing)](#)
 - [Frontend](#)
