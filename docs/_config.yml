@@ -1,11 +1,12 @@
-remote_theme: thelehhman/texture
+#remote_theme: thelehhman/texture
 
-texture:
-  title: School++
-  tagline: La tua scuola al meglio.
+#texture:
+#  title: School++
+#  tagline: La tua scuola al meglio.
   
-  social_links:
-    github: sinisimattia
+#  social_links:
+#    github: sinisimattia
   
-  style:
-    purple
+#  style:
+#    purple
+theme: tactile
