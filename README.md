@@ -9,15 +9,3 @@
 - [Visita la piattaforma](http://www.schoolplusplus.space)
 
 - [Documentazione per sviluppatori]("https://sinisimattia.github.io/school")
-
-# Di cosa si tratta?
-
-bla bla bla
-
-# Come posso aggiungere la mia scuola?
-
-bla bla bla
-
-# Come posso dare il mio contributo?
-
-bla bla bla
