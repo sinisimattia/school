@@ -30,7 +30,7 @@ class CoursePolicy
      */
     public function view(User $user, Course $course)
     {
-        //
+        return true;
     }
 
     /**
@@ -90,5 +90,20 @@ class CoursePolicy
     public function forceDelete(User $user, Course $course)
     {
         //
+    }
+
+    /**
+     * Determine whether the user can approve the course.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Course  $course
+     * @return mixed
+     */
+    public function approve(User $user, Course $course)
+    {
+        return (
+            $user->school_id == $course->school_id &&
+            $user->admin
+        );
     }
 }

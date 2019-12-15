@@ -27,4 +27,11 @@ class RequestController extends Controller
         }
         else http_response_code(500);
     }
+
+    /**
+     * Under Admin scope only.
+     */
+    public static function approve(Request $request){
+
+    }
 }

@@ -54,6 +54,24 @@ class CourseController extends Controller
     }
 
     public static function get($id){
-        return Course::find($id);
+        if (Auth::user()->can('view', Course::class))
+            return Course::find($id);
+        else return view('error', [
+            'code' => "",
+            'message' => "You are not authorized to view this course"
+        ]);
+    }
+
+    public static function approve(Request $request){
+        $course = Course::find($request->course_id);
+
+        if (Auth::user()->can('approve', $course)){
+            $course->approved = true;
+            if ($course->save()){
+                return redirect('admin');
+            }
+        }
+
+        return response('Something went wrong', 500);
     }
 }

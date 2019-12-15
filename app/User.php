@@ -52,4 +52,8 @@ class User extends Authenticatable
     public function request(){
         return $this->hasOne('App\Request');
     }
+
+    public function admin(){
+        return $this->hasOne('App\Admin');
+    }
 }
