@@ -80,4 +80,13 @@ Route::middleware('auth')->group(function () {
     Route::prefix('publish')->group(function () {
         Route::post('course', 'CourseController@create')->name('publish course');
     });
+
+    Route::middleware('admin')->group(function(){
+        Route::get('admin', function(){
+            return view('admin.dashboard');
+        })->name('admin');
+
+        // API
+        Route::get('approve/{course_id}', 'CourseController@approve');
+    });
 });
