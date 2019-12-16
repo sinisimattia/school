@@ -21,8 +21,8 @@
                 <div class="navbar-start">
                     <a class="navbar-item" href="{{ route('home') }}">@lang('ui.home')</a>
 
-                    @if (Auth::user() && Auth::user()->school)
-                    <a class="navbar-item" href="{{ route('home').'/'.Auth::user()->school->name }}">@lang('ui.your.school')</a>
+                    @if (Auth::user() && isset(Auth::user()->membership->school))
+                    <a class="navbar-item" href="{{ route('home').'/'.Auth::user()->membership->school->name }}">@lang('ui.your.school')</a>
                     @endif
                 </div>
 

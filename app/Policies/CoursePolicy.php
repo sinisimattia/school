@@ -30,7 +30,7 @@ class CoursePolicy
      */
     public function view(User $user, Course $course)
     {
-        return true;
+        return ($user->membership->school_id === $course->user->membership->school_id);
     }
 
     /**
@@ -41,7 +41,8 @@ class CoursePolicy
      */
     public function create(User $user)
     {
-        return isset($user->school_id);
+        $req = \App\Membership::find($user->id);
+        return ($req && $user->membership->approved && $user->membership->school_id === $req->school_id);
     }
 
     /**

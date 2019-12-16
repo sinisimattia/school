@@ -5,7 +5,7 @@
     @foreach ($courses as $course)
         @component('components.course', [
             'course' => $course,
-            'school' => $user->school()
+            'school' => $user->membership->school()
         ])
         @endcomponent
     @endforeach
