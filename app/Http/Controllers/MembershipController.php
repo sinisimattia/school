@@ -22,11 +22,11 @@ class MembershipController extends Controller
 
                 if ($req->save())
                     return back();
-                else http_response_code(500);
+                else response('Unable to save to database', 500);
             }
             else return back();
         }
-        else http_response_code(500);
+        else response('Request malformed / Parameters missing', 500);
     }
 
     /**
@@ -36,7 +36,16 @@ class MembershipController extends Controller
         $user = User::find($request->user_id);
 
         if ($user){
-            $req = Membership::find($user->id); //TODO finish
+            $membership = Membership::find($user->id);
+            if ($membership){
+                $membership->approved = true;
+                
+                if ($membership->save()){
+                    return back();
+                }
+            }
         }
+
+        return response('Something went wrong', 500);
     }
 }

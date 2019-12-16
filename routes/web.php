@@ -81,6 +81,7 @@ Route::middleware('auth')->group(function () {
         Route::post('course', 'CourseController@create')->name('publish course');
     });
 
+    //TODO Check if Admins have membership
     Route::middleware('admin')->group(function(){
         Route::get('admin', function(){
             return view('admin.dashboard');
