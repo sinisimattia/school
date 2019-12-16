@@ -8,7 +8,7 @@ Se desideri aiutarci oppure utilizzare le nostre tecnologie nella tua piattaform
 - [Creazione ambiente di sviluppo](startup.md)
 - [Database](database.md)
 - [Rapporti fra entità (modelli)](#)
-- [Struttura delle pagine (routing)](#)
+- [Struttura delle pagine (routes)](#)
 - [Frontend](#)
 - [Contenuti aggiuntivi (immagini, video, etc.)](#)
 - [Installare nuovi pacchetti (Composer e NPM)](#)

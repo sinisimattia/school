@@ -48,4 +48,10 @@ return [
     ],
     "home" => "Home",
     "info" => "Più info",
+    "approve" => "Approva",
+    "delete" => "Elimina",
+    "reject" => 'Respingi',
+    "approved" => "Approved",
+    "deleted" => "Eliminato",
+    "rejected" => "Respinto"
 ];

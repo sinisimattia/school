@@ -27,6 +27,9 @@
             <a class="card-footer-item has-text-danger" href="/unsubscribe/{{$course->id}}">@lang('ui.unsubscribe')</a>
             @endif
         @endif
-        <a class="card-footer-item" href="/home/{{$course->user->school->name}}/{{$course->id}}">@lang('ui.info')</a>
+
+        @if ($course->user->membership)
+        <a class="card-footer-item" href="/home/{{$course->user->membership->school->name}}/{{$course->id}}">@lang('ui.info')</a>
+        @endif
     </div>
 </div>

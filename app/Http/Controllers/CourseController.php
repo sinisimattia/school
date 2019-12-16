@@ -28,7 +28,7 @@ class CourseController extends Controller
             $course->description = $request->desc;
             $course->content = $request->content;
             $course->user_id = Auth::user()->id;
-            $course->school_id = Auth::user()->school_id;
+            $course->school_id = Auth::user()->school_id; //TODO replace with membership ID
 
             if($course->save()) return redirect()->route('home');
             else return back()->withInput();
@@ -43,7 +43,9 @@ class CourseController extends Controller
         $school = School::where('name', $school_name)->first();
 
         if ($school){
-            $list = Course::where('school_id', $school->id)->where('approved', true)->get();
+            $list = Course::where('approved', true)->whereHas('user', function($user){
+                $user->has('membership');
+            })->get();
 
             foreach ($list as $course){
                 $course->subscribed = SubscriptionController::subscribed($course->id);
@@ -54,6 +56,29 @@ class CourseController extends Controller
     }
 
     public static function get($id){
-        return Course::find($id);
+        $course = Course::find($id);
+        $user = Auth::user();
+        
+        if ($user && $user->can('view', $course)){
+            $course->subscribed = SubscriptionController::subscribed($course->id);
+            return $course;
+        }
+        else return view('error', [
+            'code' => "",
+            'message' => "You are not authorized to view this course"
+        ]);
+    }
+
+    public static function approve(Request $request){
+        $course = Course::find($request->course_id);
+
+        if (Auth::user()->can('approve', $course)){
+            $course->approved = true;
+            if ($course->save()){
+                return redirect('admin');
+            }
+        }
+
+        return response('Something went wrong', 500);
     }
 }

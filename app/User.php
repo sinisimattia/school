@@ -37,10 +37,6 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function school(){
-        return $this->belongsTo('App\School');
-    }
-
     public function subscriptions(){
         return $this->belongsToMany('App\Course');
     }
@@ -49,7 +45,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Course');
     }
 
-    public function request(){
-        return $this->hasOne('App\Request');
+    public function membership(){
+        return $this->hasOne('App\Membership')->where('approved', true);
+    }
+
+    public function admin(){
+        return $this->hasOne('App\Admin');
     }
 }

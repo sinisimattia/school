@@ -53,7 +53,7 @@ Route::middleware('auth')->group(function () {
         })->name('new course');
     });
 
-    Route::post('request', 'RequestController@new')->name('request');
+    Route::post('request', 'MembershipController@new')->name('request membership');
 
     Route::prefix('my')->group(function(){
         Route::redirect('', 'profile');
@@ -79,5 +79,18 @@ Route::middleware('auth')->group(function () {
 
     Route::prefix('publish')->group(function () {
         Route::post('course', 'CourseController@create')->name('publish course');
+    });
+
+    Route::middleware('admin')->group(function(){
+        Route::get('admin', function(){
+            return view('admin.dashboard');
+        })->name('admin');
+
+        // API
+        Route::prefix('approve')->group(function(){
+            Route::get('course/{course_id}', 'CourseController@approve')->name('approve course');
+            Route::get('user/{user_id}', 'MembershipController@approve')->name('approve user');
+        });
+        
     });
 });

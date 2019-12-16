@@ -31,4 +31,8 @@ class UserController extends Controller
     public static function get($username){
         return User::where('username', $username)->first();
     }
+
+    public static function approve(Request $request){
+        
+    }
 }
